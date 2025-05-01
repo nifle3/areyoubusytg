@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "nifle3", email = "nifle3123@gmail.com"},
 ]
-dependencies = ["aiogram>=3.20.0.post0"]
+dependencies = ["aiogram>=3.20.0.post0", "tinydb>=4.8.2", "APScheduler>=3.11.0"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
