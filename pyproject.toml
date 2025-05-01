@@ -1,5 +1,5 @@
 [project]
-name = "doyoubusytg"
+name = "areyoubusytg"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
@@ -13,10 +13,12 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+build.package-dir = "src"
 
 [tool.pdm.scripts]
 dev.cmd = "python src/areyoubusytg"
 dev.env_file = ".env"
+dev.env = { PYTHONPATH="src" }
 
 [dependency-groups]
 dev = [
