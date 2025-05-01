@@ -1,0 +1,19 @@
+[project]
+name = "doyoubusytg"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "nifle3", email = "nifle3123@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+
+dev = "python src/doyoubusytg"
