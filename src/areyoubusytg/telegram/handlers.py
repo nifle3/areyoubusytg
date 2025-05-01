@@ -8,7 +8,7 @@ router: Router = Router(name=__name__)
 async def start_command_handler(message: Message) -> None:
     """Handle the /start command."""
     await message.answer("Привет! Я бот, который будет спрашивать у тебя чем ты занят в течении дня, что бы ты не ленился")
-    
+
 @router.message(Command("help"))
 async def help_command_handler(message: Message) -> None:
     """Handle the /help command."""
