@@ -36,6 +36,6 @@ async def no_callback_handler(callback: CallbackQuery, repo: Repo) -> None:
     logger.info("received 'no' callback")
     user_id = callback.from_user.id
     await repo.set_user_state(user_id, False)
-    await callback.answer("За работу!")
+    await callback.answer("За работу!", show_alert=True)
     await callback.message.delete_reply_markup()
     await callback.message.delete()
