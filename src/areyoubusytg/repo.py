@@ -10,6 +10,7 @@ from user import User
 
 logger: Logger = getLogger(__name__)
 
+
 class TinyDbRepo:
     def __init__(self, db_name: str):
         self._db = TinyDB(db_name)
@@ -50,10 +51,16 @@ class TinyDbRepo:
 
             users = busy_users + not_busy_users
             logger.debug("Found %d users", len(users))
+            logger.debug("Users: %s", users)
 
             return [User.from_document(user) for user in users]
 
+    async def set_user_state(self, user_id: int, new_state: bool) -> None:
+        async with self._lock:
+            self._db.update({"is_busy": new_state}, Query().chat_id == user_id)
+            logger.debug("User %d state updated to %s", user_id, new_state)
+
     async def update_user(self, user: User) -> None:
         async with self._lock:
-            self._db.upsert(user.to_dict(), doc_id=user.chat_id)
+            self._db.upsert(Document(user.to_document(), doc_id=user.chat_id))
             logger.debug("User %s updated", user.chat_id)

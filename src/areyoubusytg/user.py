@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Self
+
 
 @dataclass
 class User:
@@ -18,8 +20,10 @@ class User:
         }
 
     @classmethod
-    def from_document(self, document: dict) -> None:
+    def from_document(cls, document: dict) -> Self:
         """Load the User object from a dictionary."""
-        self.chat_id = document["chat_id"]
-        self.last_message = datetime.fromisoformat(document["last_message"])
-        self.is_busy = document["is_busy"]
+        return cls(
+            chat_id=document["chat_id"],
+            last_message=datetime.fromisoformat(document["last_message"]),
+            is_busy=document.get("is_busy", False)
+        )

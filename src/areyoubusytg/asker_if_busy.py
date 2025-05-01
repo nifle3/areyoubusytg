@@ -42,6 +42,7 @@ class Asker:
         users = await self._user_repo.get_users(now, self._is_busy_delta, self._is_not_busy_delta)
         logger.info("Users to ask: %d", len(users))
         for user in users:
+            logger.debug("Asking user %d", user.chat_id)
             await self._bot_sender.send_message(user.chat_id, self._sended_message)
             user.last_message = now
             await self._user_repo.update_user(user)

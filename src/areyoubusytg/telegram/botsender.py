@@ -12,6 +12,6 @@ class TelegramBotSender:
             InlineKeyboardButton(text="Нет", callback_data="no"),
         ]])
 
-    async def send_message(self, chat_id: int, message: str, answers: list[str]) -> None:
+    async def send_message(self, chat_id: int, message: str) -> None:
         """Send a message to a user."""
         await self._bot.send_message(chat_id, message, reply_markup=self._keyboard)
