@@ -18,3 +18,7 @@ distribution = false
 
 dev.cmd = "python src/doyoubusytg"
 dev.env_file = ".env"
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]
