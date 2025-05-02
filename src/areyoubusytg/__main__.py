@@ -15,11 +15,17 @@ from config import get_env
 from telegram.middlewares import CheckSaveUserMiddleware
 from telegram.handlers import router as handlers_router
 from telegram.callback import router as callback_router
+from logger import IdContextFilter
 
 
 async def main():
     """Main entry point for the DoYouBusyTG package."""
-    logging.basicConfig(level=get_env("LOG_LEVEL", "INFO").upper())
+    filter = IdContextFilter("id")
+    logging.basicConfig(level=get_env("LOG_LEVEL", "INFO").upper(),
+                        format="%(asctime)s - %(name)s - %(levelname)s - %(id)s - %(message)s")
+    root = logging.getLogger()
+    root.addFilter(filter)
+
     logger = logging.getLogger(__name__)
     logger.info("Configure the logger with level %s", get_env("LOG_LEVEL", "INFO").upper())
 

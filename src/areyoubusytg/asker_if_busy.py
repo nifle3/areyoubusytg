@@ -1,6 +1,7 @@
 from typing import Protocol
 from datetime import datetime, timedelta
 from logging import getLogger, Logger
+import uuid
 
 from user import User
 
@@ -23,6 +24,10 @@ class UserRepo(Protocol):
     async def update_user(self, user: User) -> None:
         """Update a user."""
 
+
+class ContextVarSetter(Protocol):
+    def set_id(self, value: uuid.UUID) -> None:
+        """Set the context variable."""
 
 class Asker:
     """A class to manage the scheduling of sending message to user."""
@@ -48,3 +53,17 @@ class Asker:
             await self._user_repo.update_user(user)
 
         logger.debug("Asking end")
+
+
+class AskerDecorator:
+    """A decorator to set the context variable for the Asker class."""
+
+    def __init__(self, context_var_setter: ContextVarSetter, asker: Asker) -> None:
+        self._context_var_setter = context_var_setter
+        self._asker = asker
+
+    def ask(self) -> None:
+        id = uuid.uuid5()
+        self._context_var_setter.set_id(id)
+        logger.debug(f"Setting context ID: {id}")
+        self._asker.ask()
