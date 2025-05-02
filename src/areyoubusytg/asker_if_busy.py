@@ -30,8 +30,8 @@ class Asker:
     def __init__(self, bot_sender: BotSender, user_repo: UserRepo) -> None:
         self._bot_sender = bot_sender
         self._user_repo = user_repo
-        self._is_busy_delta = timedelta(minutes=2)
-        self._is_not_busy_delta = timedelta(minutes=1)
+        self._is_busy_delta = timedelta(minutes=60)
+        self._is_not_busy_delta = timedelta(minutes=30)
         self._sended_message = "Привет ты занят?"
 
     async def ask(self):
