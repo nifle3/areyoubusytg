@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "nifle3", email = "nifle3123@gmail.com"},
 ]
-dependencies = ["aiogram>=3.20.0.post0", "tinydb>=4.8.2", "APScheduler>=3.11.0", "aiohttp>=3.11.18"]
+dependencies = ["aiogram>=3.20.0.post0", "tinydb>=4.8.2", "APScheduler>=3.11.0", "aiohttp>=3.11.18", "pytz>=2025.2"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -18,6 +18,8 @@ build.package-dir = "src"
 dev.cmd = "python src/areyoubusytg"
 dev.env_file = ".env"
 dev.env = { PYTHONPATH="src" }
+
+exp = "pdm export --pyproject -f requirements --without urls --no-hashes -o requirements.txt "
 
 [dependency-groups]
 dev = [

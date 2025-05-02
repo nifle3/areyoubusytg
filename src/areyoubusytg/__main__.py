@@ -6,6 +6,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.executors.asyncio import AsyncIOExecutor
 from apscheduler.triggers.cron import CronTrigger
 import aiohttp
+import pytz
 
 from cat_image_service import CatImageAPI
 from asker_if_busy import Asker
@@ -22,9 +23,7 @@ async def main():
     """Main entry point for the DoYouBusyTG package."""
     filter = IdContextFilter("id")
     logging.basicConfig(level=get_env("LOG_LEVEL", "INFO").upper(),
-                        format="%(asctime)s - %(name)s - %(levelname)s - %(id)s - %(message)s")
-    root = logging.getLogger()
-    root.addFilter(filter)
+                        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
     logger = logging.getLogger(__name__)
     logger.info("Configure the logger with level %s", get_env("LOG_LEVEL", "INFO").upper())
@@ -46,11 +45,12 @@ async def main():
     asker = Asker(botsender, repo)
     logger.info("Asker created.")
 
+    timezone = pytz.timezone(get_env("TIMEZONE"))
     logger.info("Created scheduler...")
     scheduler = AsyncIOScheduler(executors={
         "default": AsyncIOExecutor(),
-    })
-    trigger = CronTrigger.from_crontab(get_env("CRON_SCHEDULE"))
+    }, timezone=timezone)
+    trigger = CronTrigger.from_crontab(get_env("CRON_SCHEDULE"), timezone=timezone)
     scheduler.add_job(asker.ask, trigger)
     logger.info("Scheduler created.")
 

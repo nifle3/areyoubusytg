@@ -3,9 +3,9 @@
 
 [metadata]
 groups = ["default", "dev"]
-strategy = ["inherit_metadata"]
+strategy = []
 lock_version = "4.5.0"
-content_hash = "sha256:7cdf7f691d030c0bcba4c319e773a7e48976385e2be657f2c09fe436f818613c"
+content_hash = "sha256:edbecaebbb8c9e78ea364c34c6ae39c4a4c7ab846e4c8f74f29cfe9feaf54916"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -14,7 +14,6 @@ requires_python = "==3.12.*"
 name = "aiofiles"
 version = "24.1.0"
 summary = ""
-groups = []
 files = [
     {file = "aiofiles-24.1.0-py3-none-any.whl", hash = "sha256:b4ec55f4195e3eb5d7abd1bf7e061763e864dd4954231fb8539a0ef8bb8260e5"},
     {file = "aiofiles-24.1.0.tar.gz", hash = "sha256:22a075c9e5a3810f0c2e48f3008c94d68c65d763b9b03857924c99e57355166c"},
@@ -24,7 +23,6 @@ files = [
 name = "aiogram"
 version = "3.20.0.post0"
 summary = ""
-groups = []
 dependencies = [
     "aiofiles",
     "aiohttp",
@@ -42,7 +40,6 @@ files = [
 name = "aiohappyeyeballs"
 version = "2.6.1"
 summary = ""
-groups = []
 files = [
     {file = "aiohappyeyeballs-2.6.1-py3-none-any.whl", hash = "sha256:f349ba8f4b75cb25c99c5c2d84e997e485204d2902a9597802b0371f09331fb8"},
     {file = "aiohappyeyeballs-2.6.1.tar.gz", hash = "sha256:c3f9d0113123803ccadfdf3f0faa505bc78e6a72d1cc4806cbd719826e943558"},
@@ -52,7 +49,6 @@ files = [
 name = "aiohttp"
 version = "3.11.18"
 summary = ""
-groups = []
 dependencies = [
     "aiohappyeyeballs",
     "aiosignal",
@@ -86,7 +82,6 @@ files = [
 name = "aiosignal"
 version = "1.3.2"
 summary = ""
-groups = []
 dependencies = [
     "frozenlist",
 ]
@@ -99,7 +94,6 @@ files = [
 name = "annotated-types"
 version = "0.7.0"
 summary = ""
-groups = []
 files = [
     {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
     {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
@@ -109,7 +103,6 @@ files = [
 name = "apscheduler"
 version = "3.11.0"
 summary = ""
-groups = []
 dependencies = [
     "tzlocal",
 ]
@@ -122,7 +115,6 @@ files = [
 name = "attrs"
 version = "25.3.0"
 summary = ""
-groups = []
 files = [
     {file = "attrs-25.3.0-py3-none-any.whl", hash = "sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3"},
     {file = "attrs-25.3.0.tar.gz", hash = "sha256:75d7cefc7fb576747b2c81b4442d4d4a1ce0900973527c011d1030fd3bf4af1b"},
@@ -132,7 +124,6 @@ files = [
 name = "certifi"
 version = "2025.4.26"
 summary = ""
-groups = []
 files = [
     {file = "certifi-2025.4.26-py3-none-any.whl", hash = "sha256:30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3"},
     {file = "certifi-2025.4.26.tar.gz", hash = "sha256:0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"},
@@ -142,7 +133,6 @@ files = [
 name = "cfgv"
 version = "3.4.0"
 summary = ""
-groups = []
 files = [
     {file = "cfgv-3.4.0-py2.py3-none-any.whl", hash = "sha256:b7265b1f29fd3316bfcd2b330d63d024f2bfd8bcb8b0272f8e19a504856c48f9"},
     {file = "cfgv-3.4.0.tar.gz", hash = "sha256:e52591d4c5f5dead8e0f673fb16db7949d2cfb3f7da4582893288f0ded8fe560"},
@@ -152,7 +142,6 @@ files = [
 name = "distlib"
 version = "0.3.9"
 summary = ""
-groups = []
 files = [
     {file = "distlib-0.3.9-py2.py3-none-any.whl", hash = "sha256:47f8c22fd27c27e25a65601af709b38e4f0a45ea4fc2e710f65755fa8caaaf87"},
     {file = "distlib-0.3.9.tar.gz", hash = "sha256:a60f20dea646b8a33f3e7772f74dc0b2d0772d2837ee1342a00645c81edf9403"},
@@ -162,7 +151,6 @@ files = [
 name = "filelock"
 version = "3.18.0"
 summary = ""
-groups = []
 files = [
     {file = "filelock-3.18.0-py3-none-any.whl", hash = "sha256:c401f4f8377c4464e6db25fff06205fd89bdd83b65eb0488ed1b160f780e21de"},
     {file = "filelock-3.18.0.tar.gz", hash = "sha256:adbc88eabb99d2fec8c9c1b229b171f18afa655400173ddc653d5d01501fb9f2"},
@@ -172,7 +160,6 @@ files = [
 name = "frozenlist"
 version = "1.6.0"
 summary = ""
-groups = []
 files = [
     {file = "frozenlist-1.6.0-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:c5b9e42ace7d95bf41e19b87cec8f262c41d3510d8ad7514ab3862ea2197bfb1"},
     {file = "frozenlist-1.6.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:ca9973735ce9f770d24d5484dcb42f68f135351c2fc81a7a9369e48cf2998a29"},
@@ -199,7 +186,6 @@ files = [
 name = "identify"
 version = "2.6.10"
 summary = ""
-groups = []
 files = [
     {file = "identify-2.6.10-py2.py3-none-any.whl", hash = "sha256:5f34248f54136beed1a7ba6a6b5c4b6cf21ff495aac7c359e1ef831ae3b8ab25"},
     {file = "identify-2.6.10.tar.gz", hash = "sha256:45e92fd704f3da71cc3880036633f48b4b7265fd4de2b57627cb157216eb7eb8"},
@@ -209,7 +195,6 @@ files = [
 name = "idna"
 version = "3.10"
 summary = ""
-groups = []
 files = [
     {file = "idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"},
     {file = "idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"},
@@ -219,7 +204,6 @@ files = [
 name = "magic-filter"
 version = "1.0.12"
 summary = ""
-groups = []
 files = [
     {file = "magic_filter-1.0.12-py3-none-any.whl", hash = "sha256:e5929e544f310c2b1f154318db8c5cdf544dd658efa998172acd2e4ba0f6c6a6"},
     {file = "magic_filter-1.0.12.tar.gz", hash = "sha256:4751d0b579a5045d1dc250625c4c508c18c3def5ea6afaf3957cb4530d03f7f9"},
@@ -229,7 +213,6 @@ files = [
 name = "multidict"
 version = "6.4.3"
 summary = ""
-groups = []
 files = [
     {file = "multidict-6.4.3-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:1f1c2f58f08b36f8475f3ec6f5aeb95270921d418bf18f90dffd6be5c7b0e676"},
     {file = "multidict-6.4.3-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:26ae9ad364fc61b936fb7bf4c9d8bd53f3a5b4417142cd0be5c509d6f767e2f1"},
@@ -256,7 +239,6 @@ files = [
 name = "nodeenv"
 version = "1.9.1"
 summary = ""
-groups = []
 files = [
     {file = "nodeenv-1.9.1-py2.py3-none-any.whl", hash = "sha256:ba11c9782d29c27c70ffbdda2d7415098754709be8a7056d79a737cd901155c9"},
     {file = "nodeenv-1.9.1.tar.gz", hash = "sha256:6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f"},
@@ -266,7 +248,6 @@ files = [
 name = "platformdirs"
 version = "4.3.7"
 summary = ""
-groups = []
 files = [
     {file = "platformdirs-4.3.7-py3-none-any.whl", hash = "sha256:a03875334331946f13c549dbd8f4bac7a13a50a895a0eb1e8c6a8ace80d40a94"},
     {file = "platformdirs-4.3.7.tar.gz", hash = "sha256:eb437d586b6a0986388f0d6f74aa0cde27b48d0e3d66843640bfb6bdcdb6e351"},
@@ -276,7 +257,6 @@ files = [
 name = "pre-commit"
 version = "4.2.0"
 summary = ""
-groups = []
 dependencies = [
     "cfgv",
     "identify",
@@ -293,7 +273,6 @@ files = [
 name = "propcache"
 version = "0.3.1"
 summary = ""
-groups = []
 files = [
     {file = "propcache-0.3.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:f78eb8422acc93d7b69964012ad7048764bb45a54ba7a39bb9e146c72ea29723"},
     {file = "propcache-0.3.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:89498dd49c2f9a026ee057965cdf8192e5ae070ce7d7a7bd4b66a8e257d0c976"},
@@ -319,7 +298,6 @@ files = [
 name = "pydantic"
 version = "2.11.4"
 summary = ""
-groups = []
 dependencies = [
     "annotated-types",
     "pydantic-core",
@@ -335,7 +313,6 @@ files = [
 name = "pydantic-core"
 version = "2.33.2"
 summary = ""
-groups = []
 dependencies = [
     "typing-extensions",
 ]
@@ -358,10 +335,18 @@ files = [
 ]
 
 [[package]]
+name = "pytz"
+version = "2025.2"
+summary = ""
+files = [
+    {file = "pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00"},
+    {file = "pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3"},
+]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.2"
 summary = ""
-groups = []
 files = [
     {file = "PyYAML-6.0.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:c70c95198c015b85feafc136515252a261a84561b7b1d51e3384e0655ddf25ab"},
     {file = "PyYAML-6.0.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:ce826d6ef20b1bc864f0a68340c8b3287705cae2f8b4b1d932177dcc76721725"},
@@ -379,7 +364,6 @@ files = [
 name = "tinydb"
 version = "4.8.2"
 summary = ""
-groups = []
 files = [
     {file = "tinydb-4.8.2-py3-none-any.whl", hash = "sha256:f97030ee5cbc91eeadd1d7af07ab0e48ceb04aa63d4a983adbaca4cba16e86c3"},
     {file = "tinydb-4.8.2.tar.gz", hash = "sha256:f7dfc39b8d7fda7a1ca62a8dbb449ffd340a117c1206b68c50b1a481fb95181d"},
@@ -389,7 +373,6 @@ files = [
 name = "typing-extensions"
 version = "4.13.2"
 summary = ""
-groups = []
 files = [
     {file = "typing_extensions-4.13.2-py3-none-any.whl", hash = "sha256:a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"},
     {file = "typing_extensions-4.13.2.tar.gz", hash = "sha256:e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"},
@@ -399,7 +382,6 @@ files = [
 name = "typing-inspection"
 version = "0.4.0"
 summary = ""
-groups = []
 dependencies = [
     "typing-extensions",
 ]
@@ -412,7 +394,6 @@ files = [
 name = "tzdata"
 version = "2025.2"
 summary = ""
-groups = []
 files = [
     {file = "tzdata-2025.2-py2.py3-none-any.whl", hash = "sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8"},
     {file = "tzdata-2025.2.tar.gz", hash = "sha256:b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9"},
@@ -422,7 +403,6 @@ files = [
 name = "tzlocal"
 version = "5.3.1"
 summary = ""
-groups = []
 dependencies = [
     "tzdata; platform_system == \"Windows\"",
 ]
@@ -435,7 +415,6 @@ files = [
 name = "virtualenv"
 version = "20.30.0"
 summary = ""
-groups = []
 dependencies = [
     "distlib",
     "filelock",
@@ -450,7 +429,6 @@ files = [
 name = "yarl"
 version = "1.20.0"
 summary = ""
-groups = []
 dependencies = [
     "idna",
     "multidict",
