@@ -1,6 +1,8 @@
 from aiogram import Bot
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+from areyoubusytg.errors import UserBlockedBot
+
 
 class TelegramBotSender:
     """A class to send messages to a user."""

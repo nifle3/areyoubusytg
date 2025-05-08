@@ -48,7 +48,12 @@ class Asker:
         logger.info("Users to ask: %d", len(users))
         for user in users:
             logger.debug("Asking user %d", user.chat_id)
-            await self._bot_sender.send_message(user.chat_id, self._sended_message)
+            try:
+                await self._bot_sender.send_message(user.chat_id, self._sended_message)
+            except Exception as e:
+                logger.exception("Error sending message to user")
+                continue
+
             user.last_message = now
             await self._user_repo.update_user(user)
 
